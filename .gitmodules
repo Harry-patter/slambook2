@@ -4,9 +4,6 @@
 [submodule "3rdparty/Sophus"]
 	path = 3rdparty/Sophus
 	url = https://github.com/strasdat/Sophus
-[submodule "3rdparty/ceres-solver"]
-	path = 3rdparty/ceres-solver
-	url = https://github.com/ceres-solver/ceres-solver
 [submodule "3rdparty/g2o"]
 	path = 3rdparty/g2o
 	url = https://github.com/Harry-patter/g2o
@@ -16,6 +13,3 @@
 [submodule "3rdparty/googletest"]
 	path = 3rdparty/googletest
 	url = https://github.com/google/googletest
-[submodule "3rdparty/glog"]
-	path = 3rdparty/glog
-	url = https://github.com/google/glog
