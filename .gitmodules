@@ -15,7 +15,7 @@
 	url = https://github.com/Harry-patter/DBow3
 [submodule "3rdparty/googletest"]
 	path = 3rdparty/googletest
-	url = https://github.com/google/googletest.git
+	url = https://github.com/google/googletest
 [submodule "3rdparty/glog"]
 	path = 3rdparty/glog
 	url = https://github.com/google/glog
