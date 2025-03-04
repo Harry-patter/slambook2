@@ -40,3 +40,9 @@ add_executable(pose_estimation_3d3d pose_estimation_3d3d.cpp)
 target_link_libraries(pose_estimation_3d3d
         g2o_core g2o_stuff
         ${OpenCV_LIBS})
+
+file(COPY 1.png DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY 2.png DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+file(COPY 1_depth.png DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY 2_depth.png DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 set(CMAKE_BUILD_TYPE Release)
-set(CMAKE_CXX_FLAGS "-std=c++11 -O2")
+set(CMAKE_CXX_FLAGS "-std=c++17 -O2")
 
 # opencv 
 find_package(OpenCV REQUIRED)
@@ -27,3 +27,5 @@ target_link_libraries(octomap_mapping ${OpenCV_LIBS} ${PCL_LIBRARIES} ${OCTOMAP_
 
 add_executable(surfel_mapping surfel_mapping.cpp)
 target_link_libraries(surfel_mapping ${OpenCV_LIBS} ${PCL_LIBRARIES})
+
+file(COPY data DESTINATION ${PROJECT_BINARY_DIR})
