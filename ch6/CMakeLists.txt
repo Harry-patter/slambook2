@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.2)
 project(ch6)
 
 set(CMAKE_BUILD_TYPE Release)
-set(CMAKE_CXX_FLAGS "-std=c++14 -O3")
+set(CMAKE_CXX_FLAGS "-std=c++17 -O3")
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
@@ -17,6 +17,8 @@ include_directories(${CERES_INCLUDE_DIRS})
 # g2o
 find_package(G2O REQUIRED)
 include_directories(${G2O_INCLUDE_DIRS})
+
+find_package(Glog REQUIRED)
 
 # Eigen
 include_directories("/usr/include/eigen3")

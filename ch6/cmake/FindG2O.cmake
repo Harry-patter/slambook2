@@ -9,7 +9,7 @@ FIND_PATH(G2O_INCLUDE_DIRS g2o/core/base_vertex.h
   /opt/local/include
   /sw/local/include
   /sw/include
-  NO_DEFAULT_PATH
+  # NO_DEFAULT_PATH
   )
 
 # Macro to unify finding both the debug and release versions of the

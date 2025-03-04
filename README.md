@@ -4,9 +4,12 @@
 1. 安装依赖\
 `chmod +x ./install_dependence.sh`\
 `./install_dependence.sh`\
+如果不能编译g2o,卸载spdlog\
+`sudo apt-get purge libspdlog-dev`
+sudo apt-get purge libspdlog-dev
 2. 编译依赖\
 `git submodule update --init --recursive`\
-3. 对每个依赖\
+对每个依赖\
 `cd 3rdparty`\
 `cd <dep>`\
 `mkdir build`\
