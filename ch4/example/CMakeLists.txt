@@ -8,3 +8,6 @@ endif()
 include_directories(${Pangolin_INCLUDE_DIRS})
 add_executable(trajectoryError trajectoryError.cpp)
 target_link_libraries(trajectoryError ${Pangolin_LIBRARIES} ${FMT_LIBRARIES})
+
+configure_file(estimated.txt ${CMAKE_CURRENT_BINARY_DIR}/estimated.txt COPYONLY)
+configure_file(groundtruth.txt ${CMAKE_CURRENT_BINARY_DIR}/groundtruth.txt COPYONLY)
