@@ -7,6 +7,7 @@
 using namespace std;
 using namespace cv;
 
+// 基于ORB特征的特征匹配
 int main(int argc, char **argv) {
   if (argc != 3) {
     cout << "usage: feature_extraction img1 img2" << endl;

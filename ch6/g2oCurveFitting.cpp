@@ -21,7 +21,7 @@ public:
 
   // 重置
   virtual void setToOriginImpl() override {
-    _estimate << 0, 0, 0;
+    _estimate << 0, 0, 0;//_estimate是一个Eigen::Vector3d类型的优化变量
   }
 
   // 更新
@@ -87,7 +87,7 @@ int main(int argc, char **argv) {
   typedef g2o::LinearSolverDense<BlockSolverType::PoseMatrixType> LinearSolverType; // 线性求解器类型
 
   // 梯度下降方法，可以从GN, LM, DogLeg 中选
-  auto solver = new g2o::OptimizationAlgorithmGaussNewton(
+  auto solver = new g2o::OptimizationAlgorithmGaussNewton(//这里是嵌套调用，两个make_unique的返回值都被当作参数
     std::make_unique<BlockSolverType>(std::make_unique<LinearSolverType>()));
   g2o::SparseOptimizer optimizer;     // 图模型
   optimizer.setAlgorithm(solver);   // 设置求解器

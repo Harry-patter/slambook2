@@ -82,7 +82,7 @@ int main(int argc, char **argv) {
     d_cam.Activate(s_cam);
 
     pangolin::OpenGlMatrix matrix = s_cam.GetModelViewMatrix();
-    Matrix<double, 4, 4> m = matrix;
+    Matrix<double, 4, 4> m(matrix);
 
     RotationMatrix R;
     for (int i = 0; i < 3; i++)

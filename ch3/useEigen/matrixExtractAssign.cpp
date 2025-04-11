@@ -42,5 +42,7 @@ int main(int argc, char **argv) {
 
     cout << "The assigned matrix block: \n" << extractedBlock << endl;
 
+    cout << "The big matrix: \n" << bigMatrix << endl;
+
     return 0;
 }

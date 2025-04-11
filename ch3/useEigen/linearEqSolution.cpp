@@ -67,7 +67,7 @@ int main() {
 
     cout << "eigenValue of A = \n" << eigenValueA << endl;
 
-  const VectorXd b1 = VectorXd::Random(3,1);
+    const VectorXd b1 = VectorXd::Random(3,1);
 
     // 1.1 调用自定义高斯消元法（Gaussian Elimination）函数
     const VectorXd gex = gaussianElimination(A1, b1);
@@ -79,19 +79,19 @@ int main() {
     const VectorXd ex = A1.partialPivLu().solve(b1);
     cout << "Solution of Eigen: x = \n" << ex << endl;
 
-  // 2. 使用LU分解法求解线性方程Ax=b
-  const Matrix<double, 3, 1> lux = A1.lu().solve(b1); // A.lu().solve(b) 的 lu() 分解适用于方阵（n×n）
+    // 2. 使用LU分解法求解线性方程Ax=b
+    const Matrix<double, 3, 1> lux = A1.lu().solve(b1); // A.lu().solve(b) 的 lu() 分解适用于方阵（n×n）
 
-  cout << "Solution of lu decomposition: x = \n" << lux << endl;
+    cout << "Solution of lu decomposition: x = \n" << lux << endl;
 
-  // 3. 使用LLT分解法求解线性方程Ax=b，要求A是对称正定矩阵
-  LLT<Matrix<double, 3, 3>> const llt(A1); // LLT 分解
-  if (llt.info() == Success) {
-    const Matrix<double, 3, 1> lltx = llt.solve(b1);
-    cout << "Solution of LLT decomposition: x = \n" << lltx << endl;
-  } else {
-    cout << "Matrix A is not positive definite!" << endl;
-  }
+    // 3. 使用LLT分解法求解线性方程Ax=b，要求A是对称正定矩阵
+    LLT<Matrix<double, 3, 3>> const llt(A1); // LLT 分解
+    if (llt.info() == Success) {
+        const Matrix<double, 3, 1> lltx = llt.solve(b1);
+        cout << "Solution of LLT decomposition: x = \n" << lltx << endl;
+    } else {
+        cout << "Matrix A is not positive definite!" << endl;
+    }
 
     // 4. 使用QR分解法
     // QR 分解
