@@ -19,6 +19,6 @@ sudo apt-get purge libspdlog-dev
 如果内存够32G ,`make -j`\
 `make install`\
 
-# 见图数据集[https://rpg.ifi.uzh.ch/datasets/remode_test_data.zip]
+# 建图数据集[https://rpg.ifi.uzh.ch/datasets/remode_test_data.zip]
 # 里程计数据集[https://www.cvlibs.net/datasets/kitti/eval_odometry.php]
 

@@ -7,12 +7,12 @@
                 "/usr/include/eigen3",
                 "/usr/include/opencv4",
                 "/usr/include/ceres",
-                "/usr/include/pcl-1.14/**"
+                "/usr/include/pcl-1.14"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "/usr/bin/g++",
             "cStandard": "c17",
-            "cppStandard": "gnu++14",
+            "cppStandard": "gnu++17",
             "intelliSenseMode": "linux-gcc-x64"
         }
     ],
