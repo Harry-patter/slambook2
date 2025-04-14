@@ -21,3 +21,5 @@ target_link_libraries( loop_closure ${OpenCV_LIBS} ${DBoW3_LIBS} )
 
 add_executable( gen_vocab gen_vocab_large.cpp )
 target_link_libraries( gen_vocab ${OpenCV_LIBS} ${DBoW3_LIBS} )
+
+file(COPY data DESTINATION ${PROJECT_BINARY_DIR})

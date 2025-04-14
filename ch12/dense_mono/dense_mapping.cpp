@@ -63,7 +63,7 @@ bool readDatasetFiles(
  * @param depth_cov     深度方差
  * @return              是否成功
  */
-bool update(
+void update(
     const Mat &ref,
     const Mat &curr,
     const SE3d &T_C_R,
@@ -258,7 +258,7 @@ bool readDatasetFiles(
 }
 
 // 对整个深度图进行更新
-bool update(const Mat &ref, const Mat &curr, const SE3d &T_C_R, Mat &depth, Mat &depth_cov2) {
+void update(const Mat &ref, const Mat &curr, const SE3d &T_C_R, Mat &depth, Mat &depth_cov2) {
     for (int x = boarder; x < width - boarder; x++)
         for (int y = boarder; y < height - boarder; y++) {
             // 遍历每个像素

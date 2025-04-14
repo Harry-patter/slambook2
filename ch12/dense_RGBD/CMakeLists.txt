@@ -28,4 +28,4 @@ target_link_libraries(octomap_mapping ${OpenCV_LIBS} ${PCL_LIBRARIES} ${OCTOMAP_
 add_executable(surfel_mapping surfel_mapping.cpp)
 target_link_libraries(surfel_mapping ${OpenCV_LIBS} ${PCL_LIBRARIES})
 
-file(COPY data DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY data DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

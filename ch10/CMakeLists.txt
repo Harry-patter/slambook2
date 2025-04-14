@@ -29,3 +29,4 @@ target_link_libraries(pose_graph_g2o_lie
         ${Sophus_LIBRARIES}
         )
 
+file(COPY sphere.g2o DESTINATION ${PROJECT_BINARY_DIR})
